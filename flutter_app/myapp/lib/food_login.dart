@@ -96,11 +96,11 @@ class _FoodLoginState extends State<FoodLogin> {
                         ),
                       ),
                       onPressed: () {
-                        if(_formKey.currentState!.validate()){
-                          final okayUser = authList.firstWhere(
-                            (user) => 
-                            user.email = foodProvider.email.text.trim();
-                          )
+                        if (_formKey.currentState!.validate()) {
+                          final okayUser = foodProvider.authList.firstWhere(
+                            (user) =>
+                                user.email == foodProvider.email.text.trim(),
+                          );
                         }
                       },
                       child: Text("Sign In ", style: TextStyle(fontSize: 17)),
