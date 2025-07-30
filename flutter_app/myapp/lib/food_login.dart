@@ -97,7 +97,7 @@ class _FoodLoginState extends State<FoodLogin> {
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          final okayUser = authList.firstWhere(
+                          final okayUser = foodProvider.authList.firstWhere(
                             (user) =>
                                 user.email == foodProvider.email.text.trim(),
                           );
